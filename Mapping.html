@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <title>Part1</title>
+    <link rel="stylesheet" href="design.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/40e3d41383.js" crossorigin="anonymous"></script>
+
+
+
+</head>
+
+
+<body>
+
+
+    <div class="container-fluid position-relative" id="Phantom_UI">
+
+        <div class="row">
+
+
+            <div class="col-sm-3 px-0 columnfour">
+
+                <img class="img-fluid" src="first.jpg">
+
+                <p class="text-center newly fs-5">LR No: 553456 Dated-28/6/22</p>
+
+                <div class="newly mx-4 py-1 ">
+
+
+                    <div class="card mx-3 my-2" style="background-color:#f5f5f5;">
+
+                        <div class="card-body">
+
+                            <p>Consignor : ABC IMPEX, H-45, Samalkha, New Delhi-110037</p>
+                            <p>Consignee : XYZ EXIM, 56-B, Faridabad sector–8, 121059 </p>
+                            <p>Vehicle : Canter 14 feet – DL1MA1234</p>
+                            <p>Driver : Diljeet, +91 9871259261</p>
+
+
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <button class="border-0 btnkey fs-5 p-1 rounded" style="width: 88%;">Share Feedback</button>
+
+                        <button class="border-0 btnkey fs-5 p-1 m-2 rounded" style="width: 88%;">Raise
+                            Complaint</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-sm-9 px-0">
+
+                <img src="mapjpg.jpg" width="100%" height="100%">
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <div class="wrapper mx-auto py-4 movetotop  position-absolute w-100" id="mmk">
+        <div class="margin-area">
+            <div class="shipping" id="expand">
+                <div class="dot one">1</div>
+                <div class="progress-bar first" id="real"></div>
+                <div class="dot two">2</div>
+                <div class="progress-bar second" id="real"></div>
+                <div class="dot three">3</div>
+                <div class="progress-bar third" id="real"></div>
+                <div class="dot four">4</div>
+            </div>
+
+
+
+
+            <div class="container-fluid bg-white p-0 ">
+
+                <div class="row" id="movetoright">
+
+                    <div class="col-sm-3 mt-5 ship" id="renew">
+                       <span class="fw">Trip Started</span> 
+                        <div id="mphrase">15-07-2022 13:45<br>
+                            10-C, Masjid Moth Phase 1,<br>
+                            Greater Kailash 1, ND-48<br>
+                            <button type="button" class="border-0 fs-6 text-light viewimg px-3 mt-3" id="btnid1">View
+                                Images</button>
+                        </div>
+
+                    </div>
+
+                    <div class="col-sm-3 mt-5 ship" id="renew">
+                        <span class="fw">At Pickup Location</span>
+                        <div id="mphrase1">15-07-2022 13:45<br>
+                            10-C, Masjid Moth Phase 1,<br>
+                            Greater Kailash 1, ND-48<br>
+                            <button type="button" class="border-0 fs-6 text-light viewimg px-3 mt-3" id="btnid2">View
+                                Images</button>
+                        </div>
+
+                    </div>
+
+                    <div class="col-sm-3 mt-5 ship" id="renew">
+                        <span class="fw"> At Delivery Location</span>
+
+                        <div id="mphrase2">15-07-2022 13:45<br>
+                            10-C, Masjid Moth Phase 1,<br>
+                            Greater Kailash 1, ND-48<br>
+                            <button type="button" class="border-0 fs-6 text-light viewimg px-3 mt-3" id="btnid3">View
+                                Images</button>
+                        </div>
+
+                    </div>
+
+                    <div class="col-sm-2 mt-5 ship" id="renew">
+                        <span class="fw">Delievered</span>
+
+                        <div id="mphrase3">15-07-2022 13:45<br>
+                            10-C, Masjid Moth Phase 1,<br>
+                            Greater Kailash 1, ND-48<br>
+                            <button type="button" class="border-0 fs-6 text-light viewimg px-3 mt-3" id="btnid4">View
+                                Images</button>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-1">
+                        <img src ="up-chevron.png" class=" float-start mt-3" id="scroll_icon">
+                        <img src ="down-chevron.png" class=" float-start mt-3" id="scroll_icon_down">
+                    </div>
+
+
+
+
+                    <script>
+
+
+                        $(document).ready(function () {
+                            $("#scroll_icon").click(function () {
+                                $("#scroll_icon").hide();
+                                $("#scroll_icon_down").show();
+                            });
+                        })
+
+
+
+                        $(document).ready(function () {
+                            $("#scroll_icon_down").click(function () {
+                                $("#mphrase , #mphrase1 , #mphrase2 ,#mphrase3").hide(500);
+                                $("#scroll_icon").show();
+                                $("#scroll_icon_down").hide();
+                                $(".movetotop").animate({ top: '82%' });
+                            });
+                        })
+
+
+                        $(document).ready(function () {
+                            $("#scroll_icon").click(function () {
+                                $("#mphrase , #mphrase1 , #mphrase2 ,#mphrase3").show(500);
+                                $(".movetotop").animate({ top: '65%' });
+                                $(".movetotop").css("background-color", "white");
+
+
+
+                            });
+                        })
+
+                        $(document).ready(function () {
+                            $("#scroll_icon").click(function () {
+                                $("#expand").css({ "width": "214%", "margin-left": "-77%" });
+
+
+
+                            });
+                        })
+
+                        $(document).ready(function () {
+                            $("#scroll_icon_down").click(function () {
+                                $("#expand").css({ "width": "80%", "margin-left": "-10%" });
+
+
+
+
+                            });
+                        })
+
+                        $(document).ready(function () {
+                            $("#btnid1 , #btnid2 , #btnid3 , #btnid4").click(function () {
+                                $("#Phantom_UI").css({ "opacity": "0.6" });
+                                $(".movetotop").css({ "opacity": "0.6" });
+                                $(".boxmodule").css( "display" , "block");
+
+
+
+
+                            });
+                        })
+
+
+                        $(document).ready(function () {
+                            $("#closebtn").click(function () {
+                                $(".boxmodule").css({ "display" : "none"});
+                                $("#Phantom_UI").css({ "opacity": "1" });
+                                $(".movetotop").css({ "opacity": "1" });
+
+
+
+
+                            });
+                        })
+
+                        function responsive(maxWidth) {
+                            if (maxWidth.matches) {
+                                $('#scroll_icon').click();
+                                $('.boxmodule').css({ 'height': '50%' });
+
+                            } else {
+                                $('#scroll_icon').click();
+                                $('.boxmodule').css({ 'height': '80%', 'background-color': 'white' });
+                            }
+                        }
+                        var maxWidth = window.matchMedia("(max-width: 768px)");
+
+                        responsive(maxWidth);
+                        maxWidth.addListener(responsive);
+
+
+
+                        function responsive(maxWidth) {
+                            if (maxWidth.matches) {
+                                $('#scroll_icon').click();
+                                $('#mtp').css({ "top":"200%"});
+
+                            } else {
+                                $('#scroll_icon').click();
+                                $('#mtp').css({ "top":"70%"});
+                            }
+                        }
+                        var maxWidth = window.matchMedia("(max-width: 500px)");
+
+                        responsive(maxWidth);
+                        maxWidth.addListener(responsive);
+
+
+
+
+                    </script>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="bg-white boxmodule position-absolute">
+
+
+    <span class="close float-end fs-4 fw-bold mx-3" id="closebtn">&times;</span>
+
+        <div class="container bg-white p-5">
+
+          
+
+            <div class=" d-flex justify-content-around align-items-center">
+
+                
+
+                <div class="border  border-success imgbox">
+
+                    Image
+
+
+                </div>
+
+                <div class=" border  border-success imgbox">
+
+                    Image
+
+
+                </div>
+
+
+                <div class="border  border-success imgbox">
+
+                    Image
+
+
+                </div>
+             
+                
+
+
+            </div>
+
+
+            <div class=" d-flex justify-content-around align-items-center mt-3">
+
+                <div class="border  border-success imgbox">
+
+                    Image
+
+
+                </div>
+
+                <div class=" border  border-success imgbox">
+
+                    Image
+
+
+                </div>
+
+
+                <div class="border  border-success imgbox">
+
+                    Image
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
